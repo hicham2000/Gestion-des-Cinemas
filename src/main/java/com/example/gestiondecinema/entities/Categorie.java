@@ -1,4 +1,4 @@
-package com.example.gestiondecinema.dao;
+package com.example.gestiondecinema.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,6 +18,6 @@ public class Categorie implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @OneToMany(mappedBy = "categorie")
-    private Collation<Film> films;
+//    @OneToMany(mappedBy = "categorie")
+//    private Collation<Film> films;
 }

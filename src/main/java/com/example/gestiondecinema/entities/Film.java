@@ -1,4 +1,4 @@
-package com.example.gestiondecinema.dao;
+package com.example.gestiondecinema.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.security.PrivateKey;
 import java.util.Collection;
 import java.util.Date;
 

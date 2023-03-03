@@ -1,4 +1,4 @@
-package com.example.gestiondecinema.dao;
+package com.example.gestiondecinema.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,18 +8,22 @@ import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.Date;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor @ToString
-public class Salle implements Serializable {
+public class Projection implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private int nombrePlace;
+    private Date dateProjection;
+    private double prix;
     @ManyToOne
-    private Cinema cinema;
-    @OneToMany(mappedBy = "salle")
-    private Collection<Place> places;
-    @OneToMany(mappedBy = "salle")
-    private Collection<Projection> projections;
+    private Salle salle;
+    @ManyToOne
+    private Film film;
+    @OneToMany(mappedBy = "projection")
+    private Collection<Ticket> tickets;
+    @ManyToOne
+    private Seance seance;
+
 }
