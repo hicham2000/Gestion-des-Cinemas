@@ -23,9 +23,9 @@ public class Film implements Serializable {
     private String realisateur;
     private Date dateSortie;
     private double duree;
+    @ManyToOne
+    private Categorie categorie;
     private String photo;
     @OneToMany(mappedBy = "film")
     private Collection<Projection> projections;
-    @ManyToOne
-    private Categorie categorie;
 }

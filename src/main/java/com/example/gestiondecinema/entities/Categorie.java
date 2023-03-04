@@ -8,6 +8,7 @@ import lombok.ToString;
 import org.hibernate.sql.ast.tree.expression.Collation;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
@@ -18,6 +19,6 @@ public class Categorie implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-//    @OneToMany(mappedBy = "categorie")
-//    private Collation<Film> films;
+    @OneToMany(mappedBy = "categorie")
+    private List<Film> films;
 }

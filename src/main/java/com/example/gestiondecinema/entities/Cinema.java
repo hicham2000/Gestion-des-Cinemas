@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Data @ToString
@@ -18,8 +19,8 @@ public class Cinema implements Serializable {
     private double longitude, latitude, altitude;
     private int nombresSalles;
 
-//    @OneToMany(mappedBy = "cinema")
-//    private Collections<Salle> salles;
+    @OneToMany(mappedBy = "cinema")
+    private List<Salle> salles;
     @ManyToOne
     private Ville ville;
 
