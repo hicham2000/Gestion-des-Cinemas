@@ -2,6 +2,7 @@ package com.example.gestiondecinema.service;
 
 import com.example.gestiondecinema.dao.*;
 import com.example.gestiondecinema.entities.*;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ import java.util.Random;
 import java.util.stream.Stream;
 
 @Service
+@Transactional
 public class CinemaInitServiceImpl implements ICinemaIntService {
     @Autowired
     private VilleRepository villeRepository;
@@ -48,6 +50,7 @@ public class CinemaInitServiceImpl implements ICinemaIntService {
     }
 
     @Override
+
     public void initCinemas() {
 
         villeRepository.findAll().forEach(v -> {
