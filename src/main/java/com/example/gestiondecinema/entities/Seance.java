@@ -1,5 +1,4 @@
 package com.example.gestiondecinema.entities;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
