@@ -8,8 +8,7 @@ import java.io.Serializable;
 import java.util.Date;
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@AllArgsConstructor  @NoArgsConstructor
 @ToString
 public class Seance implements Serializable {
     @Id
