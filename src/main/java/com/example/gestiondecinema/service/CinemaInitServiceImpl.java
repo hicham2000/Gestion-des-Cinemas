@@ -36,8 +36,6 @@ public class CinemaInitServiceImpl implements ICinemaIntService {
     private CategorieRepository categorieRepository;
     @Autowired
     private TicketRepository ticketRepository;
-
-
     @Override
     public void initVilles() {
         Stream.of("Casablanca", "Marakech", "Rabat", "Tangeer").forEach(v -> {
